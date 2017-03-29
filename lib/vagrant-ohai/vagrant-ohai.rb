@@ -16,7 +16,7 @@ module VagrantPlugins
         require_relative 'action_install_ohai_plugin'
         require_relative 'action_configure_chef'
         hook.after(Vagrant::Action::Builtin::Provision, ActionInstallOhaiPlugin)
-        hook.before(Vagrant::Action::Builtin::ConfigValidate, ActionConfigureChef)
+        hook.before(Vagrant::Action::Builtin::Provision, ActionConfigureChef)
       end
 
       config(:ohai) do
