@@ -20,6 +20,8 @@ module VagrantPlugins
         case @primary_nic
         when /eth[0-9]+/
             {}
+        when /enp[0-9]+s[0-9]+/
+            {}
         when nil
             {}
         else
